@@ -1,0 +1,16 @@
+<img src=<%=@employee.img_url%> style="width:200px;height:200px;">
+<h2><%=@employee.name%> 
+<%if @employee.alias.downcase != "none" && @employee.alias.length > 0%>
+  (AKA "<%=@employee.alias%>")
+<%end%></h2>
+<h3>Title:</h3>
+<%=@employee.title%>
+<br><br>
+<h3>Branch:</h3>
+<%=@employee.office%>
+<br><br>
+<h3>Dog:</h3>
+<%=link_to @dog.name, @dog%>
+<br><br>
+<%=button_to "Edit #{@employee.first_name}", edit_employee_path(@employee), method: :get%>
+
