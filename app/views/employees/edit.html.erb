@@ -1,0 +1,22 @@
+<h1>Edit an Employee</h1>
+
+
+<%= form_with model: @employee do |f|%>
+<%= f.label "First Name"%>
+<%= f.text_field :first_name%>
+<%= f.label "Last Name"%>
+<%= f.text_field :last_name%>
+<%= f.label "Alias"%>
+<%= f.text_field :alias%>
+<%= f.label "Title"%>
+<%= f.text_field :title%>
+<%= f.label "Office"%>
+<%= f.text_field :office%>
+<%= f.label "Image URL"%>
+<%= f.text_field :img_url%>
+<%= f.label "Select a Dog"%>
+<%= f.collection_select :dog_id, Dog.all, :id, :name%>
+<%= f.submit "Submit the New Dunder Mifflin Employee!"%>
+<%end%>
+
+<%= button_to "Delete", @employee, method: :delete %>

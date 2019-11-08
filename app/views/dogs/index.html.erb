@@ -1,0 +1,7 @@
+<h1>Index page.... Da dogs of Scranton, PA</h1>
+
+<%@dogs.each do |dog|%>
+<ul>
+<%= link_to dog.name, dog_path(dog) %>
+</ul>
+<%end%>
