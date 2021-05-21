@@ -1,0 +1,11 @@
+<h1>Say Hello to <%=@dog.name%>!</h1>
+<br><br>
+<%=@dog.name%> is an adorable <%=@dog.age%>-year-old <%=@dog.breed%> and a VERY GOOD DOGGIE!!
+<br>
+
+<h3><%=@dog.name%>'s Owners:</h3>
+<ul>
+<%@owners.each do |owner|%>
+  <li><%=link_to owner.name, owner%></li>
+<%end%>
+</ul>
